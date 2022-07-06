@@ -10,10 +10,10 @@
 
 6. Implementasi arstektur Microservices, menggunakan Kubernetes dengan Docker container deploy di VPS (1 node dengan beberapa pod di dalamnya). Bagi yang belum memiliki VPS, maka cukup (a) menyiapkan semua YML agar aplikasi bisa dijalankan secara containerize dan siap di deploy di Kubernetes dan (b) di-deploy di lokal dan sertakan screenshoot. []
 
-7. Upload source code ke Github beserta script YML Kubernetes. []
+7. Upload source code ke Github beserta script YML Kubernetes. HALF[v]
 
-8. Bikin dokumentasi API nya (Postman atau Swagger) yang bisa diakses ke server Rest API nya. []
+8. Bikin dokumentasi API nya (Postman atau Swagger) yang bisa diakses ke server Rest API nya. [v]
 
-9. Bikin diagram arstektur nya yang menjelaskan flow API CRUD dan Login. []
+9. Bikin diagram arstektur nya yang menjelaskan flow API CRUD dan Login. [v]
 
-10. Lampirkan credential Admin di Readme. []
+10. Lampirkan credential Admin di Readme. [v]

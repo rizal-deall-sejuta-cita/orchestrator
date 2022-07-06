@@ -35,13 +35,15 @@ const authentication = async (req, res, next) => {
         }
 
     } catch ({ response }) {
-        let { status } = response
-        let { data: { message }} = response
-
-        next({
-            status,
-            message
-        })
+        if (response) {
+            let { status } = response
+            let { data: { message }} = response
+    
+            next({
+                status,
+                message
+            })
+        }
     }
 }
 
