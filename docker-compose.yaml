@@ -1,0 +1,29 @@
+version: '3.3'
+services:
+    auth-server:
+        restart: unless-stopped
+        container_name: auth-server
+        ports:
+            - 3001:3000
+        environment:
+            - 'MONGODB_URI=mongodb+srv://mongo:mongo@technicaltestdb.lkezzg9.mongodb.net/?retryWrites=true&w=majority'
+            - JWT_ACCESSTOKEN_SECRET=rahasiaac
+            - JWT_REFRESH_SECRET=refreshrahasia
+        image: rizal-deall-sejuta-cita/auth-server
+    resource-server:
+        restart: unless-stopped
+        container_name: resource-server
+        ports:
+            - 3002:3000
+        environment:
+            - 'MONGODB_URI=mongodb+srv://mongo:mongo@technicaltestdb.lkezzg9.mongodb.net/?retryWrites=true&w=majority'
+        image: rizal-deall-sejuta-cita/resource-server
+    orchestrator:
+        restart: unless-stopped
+        container_name: orchestrator
+        ports:
+            - 3003:3000
+        environment:
+            - 'BASE_URL_AUTH=http://auth-server:3001'
+            - 'BASE_URL_USER=http://resource-server:3002/users'
+        image: rizal-deall-sejuta-cita/orchestrator
